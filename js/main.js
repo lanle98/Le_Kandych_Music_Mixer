@@ -5,8 +5,7 @@
 
 	let instruments = document.querySelectorAll(".instruments");
 
-
-
+	
 	instruments.forEach(Off => Off.volume = 0);
 	
 
