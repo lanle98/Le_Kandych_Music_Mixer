@@ -50,12 +50,12 @@
 <section class="icons">
 	<h2 class="hidden">Icons</h2>
 
-	<img src="images/drumb-01.svg" alt="dumb" width="80" height="80">
-	<img src="images/piano-01.svg" alt="piano" width="80" height="80">
-	<img src="images/electro_guitar-01.svg" alt="saxophone" width="80" height="80">
-	<img src="images/guitar-01.svg" alt="guitar" width="80" height="80">
-	<img src="images/cajon-01.svg" alt="cello" width="80" height="80">
-	<img src="images/maracas-01.svg" alt="maracas" width="80" height="80">
+	<img data-instrumentsref = "0" src="images/drumb-01.svg" alt="dumb" width="80" height="80">
+	<img data-instrumentsref = "1" src="images/piano-01.svg" alt="piano" width="80" height="80">
+	<img data-instrumentsref = "2" src="images/electro_guitar-01.svg" alt="saxophone" width="80" height="80">
+	<img data-instrumentsref = "3" src="images/guitar-01.svg" alt="guitar" width="80" height="80">
+	<img data-instrumentsref = "4" src="images/cajon-01.svg" alt="cello" width="80" height="80">
+	<img data-instrumentsref = "5" src="images/maracas-01.svg" alt="maracas" width="80" height="80">
 
 </section>
 
@@ -63,31 +63,27 @@
 	<h2 class="hidden">Icons</h2>
 	
 		<div class="base">Base<audio loop  controls src="assets/base.wav" type="audio/wav" autoplay   ></audio>
-
-
 		</div>
-		<div  >Guitar<audio class="instruments" style="display: none" id="guitar" controls src="assets/guitar.wav" type="audio/wav" autoplay loop ></audio>
-				<button id="guitarbutton">Volume On</button>
-		</div>
-  		<div  >Electric Guitar<audio class="instruments" style="display: none" id="electric_guitar" controls src="assets/electric_guitar.wav" autoplay type="audio/wav"  loop></audio>
-				<button id="electric_guitarbutton">Volume On</button>
+		
+		<div  >Drumb<audio class="instruments"  style="display: none" id="drumb" controls src="assets/drum.wav" type="audio/wav" autoplay loop></audio>
   		</div>
-  		<div  >Drumb<audio class="instruments"  style="display: none" id="drumb" controls src="assets/drum.wav" type="audio/wav" autoplay loop></audio>
 
-				<button id="drumbbutton">Volume On</button>
-  		</div>
-  		<div  >Shaker<audio class="instruments" style="display: none" id="shaker" controls src="assets/shaker.wav" type="audio/wav" autoplay loop></audio>
-				<button id="shakerbutton">Volume On</button>
-  		</div>
   		<div >Piano<audio class="instruments"  style="display: none" id="piano"controls src="assets/piano.wav" type="audio/wav" autoplay loop></audio>
-
-				<button id="pianobutton">Volume On</button>
   		</div>
+
+  		<div  >Electric Guitar<audio class="instruments" style="display: none" id="electric_guitar" controls src="assets/electric_guitar.wav" autoplay type="audio/wav"  loop></audio>
+  		</div>
+
+  		<div>Guitar<audio class="instruments" style="display: none" id="guitar" controls src="assets/guitar.wav" type="audio/wav" autoplay loop ></audio>	
+		</div>
+
+
   		<div >Cajon<audio class="instruments" style="display: none" id="cajon" controls src="assets/cajon.wav" type="audio/wav" autoplay loop></audio>
-
-				<button id="cajonbutton">Volume On</button>
   		</div>	
+		
 
+		<div  >Shaker<audio class="instruments" style="display: none" id="shaker" controls src="assets/shaker.wav" type="audio/wav" autoplay loop></audio>
+  		</div>
 		
 		<!-- trigger the audio to autoplay -->
 		<iframe id="iframe" src="assets/silence.wav" style="display: none" allow="autoplay"></iframe>

@@ -95,7 +95,7 @@ body
   margin-left: 460px; 
   align-items: center;
   opacity: 1;
-  animation: scaleIn 1s infinite cubic-bezier(.17,.67,.83,.67);
+  animation: scaleIn .4s infinite cubic-bezier(.17,.67,.83,.67);
 }
 
 .cyan
