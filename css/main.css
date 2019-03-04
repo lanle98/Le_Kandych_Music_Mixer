@@ -13,7 +13,7 @@ body
   background-color: #050505;
 }
 
-.red 
+.wave0 
 {
   border: 20%;
   border: px solid #FF0000;
@@ -27,11 +27,12 @@ body
   margin-left: 960px; 
   align-items: center;
   opacity: 1;
-  animation: scaleIn 1s infinite cubic-bezier(.17,.67,.83,.67);
+  animation: scaleIn 650ms infinite cubic-bezier(.17,.67,.83,.67);
+  animation-timing-function: linear
 }
 
 
-.orange {
+.wave1 {
   border: 20%;
   border: px solid #FF5500;
   border-radius: 100%;
@@ -44,10 +45,11 @@ body
   margin-left: 667px; 
   align-items: center;
   opacity: 1;
-  animation: scaleIn 1s infinite cubic-bezier(.17,.67,.83,.67);
+  animation:  scaleIn 650ms infinite cubic-bezier(.17,.67,.83,.67);
+  animation-timing-function: linear
 }
 
-.green 
+.wave2
 {
   border: 20%;
   border: px solid #00FF18;
@@ -61,10 +63,11 @@ body
   margin-left: 1070px; 
   align-items: center;
   opacity: 2;
-  animation: scaleIn 1s infinite cubic-bezier(.17,.67,.83,.67);
+  animation: scaleIn 650ms infinite cubic-bezier(.17,.67,.83,.67);
+  animation-timing-function: linear
 }
 
-.yellow 
+.wave3
 {
   border: 20%;
   border: px solid #FFF800;
@@ -78,10 +81,11 @@ body
   margin-left: 495px; 
   align-items: center;
   opacity: 1;
-  animation: scaleIn 1s infinite cubic-bezier(.17,.67,.83,.67);
+  animation: scaleIn 650ms infinite cubic-bezier(.17,.67,.83,.67);
+  animation-timing-function: linear
 }
 
-.pink
+.wave4
  {
   border: 20%;
   border: px solid #FF00CF;
@@ -95,10 +99,11 @@ body
   margin-left: 460px; 
   align-items: center;
   opacity: 1;
-  animation: scaleIn .4s infinite cubic-bezier(.17,.67,.83,.67);
+  animation: scaleIn 650ms infinite cubic-bezier(.17,.67,.83,.67);
+  animation-timing-function: linear
 }
 
-.cyan
+.wave5
  {
   border: 20%;
   border: px solid #00F3FF;
@@ -112,7 +117,8 @@ body
   margin-left: 720px; 
   align-items: center;
   opacity: 1;
-  animation: scaleIn 1s infinite cubic-bezier(.17,.67,.83,.67);
+  animation: scaleIn 650ms infinite cubic-bezier(.17,.67,.83,.67);
+  animation-timing-function: linear
 }
 
 @keyframes scaleIn {
@@ -121,7 +127,7 @@ body
     opacity: 2;
   }
   to {
-    transform: scale(2, 2);
+    transform: scale(5, 5);
     opacity: 1.5;
   }
 }
@@ -166,4 +172,16 @@ body
 .icons img:active
 {
   filter: hue-rotate(80deg);
+}
+
+
+.icons
+{
+  position: absolute;
+}
+.map
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
