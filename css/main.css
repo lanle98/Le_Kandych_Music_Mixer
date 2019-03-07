@@ -13,6 +13,12 @@ body
     position: relative;
 }
 
+.title
+{
+  font-size: 100px;
+  color: white;
+  text-align: center;
+}
 
 .pulsing_Circles
 {
@@ -148,8 +154,11 @@ body
 
 .map1
 {
-  animation: fadeIn .3s linear;
-   position: absolute;
+  animation: fadeIn .2s linear;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
 }
 
 
@@ -158,24 +167,31 @@ body
 {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 50px;
-
+  margin: 50px;
 }
 
+.iconsImage
+{
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .icons img
 {
    transition:.8s;
    filter: none;
-   width: 7%;
-   height: 7%;
+   width: 50%;
+   height: 50%;
 }
 
 .icons img:hover
 {
   filter: hue-rotate(360deg);
-  width: 8%;
-   height: 8%;
+  width: 60%;
+   height: 60%;
 }
 
 #worldMap

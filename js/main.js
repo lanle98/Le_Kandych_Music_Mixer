@@ -53,7 +53,7 @@
 				instruments[dataDrop].volume = 1;
 			console.log('you dropped something on me');
 
-			if(pulsingCir.childElementCount<7)
+			if(pulsingCir.childElementCount<7 )
 				{
 					let newWave = `<img class="wave${e.dataTransfer.getData("text/plain")}" class="wave-image"
 				 	src="images/${"wave"+ e.dataTransfer.getData("text/plain")}.svg" alt="Wave" draggable>`;
@@ -61,19 +61,22 @@
 				 	console.log(newWave);
 				}
 			
-			 if(i<=5)
+			 if(i<=6)
 			 	{
 			 		newMap = `<img class="map map1" class="wave-image"
 			 	src="images/${"map"+ i++}.svg" alt="Wave" draggable>`;
 			 	console.log(newMap);
+
+
 			 	}
-			 	console.log(pulsingCir.children)
 
 			 	
 				
 			
 			 	// dropzone.removeChild(dropzone.firstElementChild)
-			 	dropzone.innerHTML += newMap ;
+			 	dropzone.innerHTML += newMap;
+			 	// dropzone.removeChild(dropzone.children[1])
+			 
 			 	
 		})
 
