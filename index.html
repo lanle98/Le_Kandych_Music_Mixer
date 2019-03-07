@@ -3,58 +3,32 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Music Mixer</title>
-<<<<<<< HEAD
 
-=======
+
+
 	<link rel="stylesheet" type="text/css" href="css/main.css">
->>>>>>> 62a429798d74d1ededa655793729589382f926c2
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 
 <body>
 
-	<!-- <img class="tittle" src="images/music_mixer_title-01.svg" alt="Music Mixer" width="582" height="75"> -->
 
-
+<h2 class="title">Music Mixer</h2>
 <section class="pulsing_Circles">
-	<h1 class="hidden">Pulsing Circles</h1>
-
-<div id="redCircle">
-<div class="red" style="animation-delay: 0s"><img src="images/red_circles-01.svg" alt="red_cirkle"></div>
-</div>
-
-<div id="orangeCircle">
-<div class="orange" style="animation-delay: 0s"><img src="images/orange_circles-01.svg" alt="orange_cirkle"></div>
-</div>
-
-<div id="greenCircle">
-<div class="green" style="animation-delay: 0s"><img src="images/green_circles-01.svg" alt="green_cirkle"></div>
-</div>
-
-<div id="yellowCircle">
-<div class="yellow" style="animation-delay: 0s"><img src="images/yellow_circles-01.svg" alt="yellow_cirkle"></div>
-</div>
-
-
-<div id="pinkCircle">
-<div class="pink" style="animation-delay: 0s"><img src="images/pink_circles-01.svg" alt="pimk_cirkle"></div>
-</div>
-
-<div id="cyanCircle">
-<div class="cyan" style="animation-delay: 0s"><img src="images/cyan_circles-01.svg" alt="cyan_cirkle"></div>
-</div>
-
+	<h3 class="hidden">Pulsing Circles</h>
 </section>
 
 <section id="worldMap">
-	<h2 class="hidden">World Map</h2>
-<img src="images/world_map_gray-01.svg" alt="word map" width="880" height="537">
+	<h3 class="hidden">World Map</h3>
+<img class="map" src="images/map0.svg" alt="word map" width="880" height="537">
 
 </section>
 
-<section class="icons">
-	<h2 class="hidden">Icons</h2>
 
-<<<<<<< HEAD
+
+
+
+
+
 	<img src="images/drumb-01.svg" alt="dumb" width="80" height="80">
 	<img src="images/piano-01.svg" alt="piano" width="80" height="80">
 	<img src="images/electro_guitar-01.svg" alt="saxophone" width="80" height="80">
@@ -84,39 +58,52 @@
 	<img data-instrumentsref = "4" src="images/cajon-01.svg" alt="cello" width="80" height="80">
 	<img data-instrumentsref = "5" src="images/maracas-01.svg" alt="maracas" width="80" height="80">
 >>>>>>> 62a429798d74d1ededa655793729589382f926c2
+=======
+>>>>>>> d0b64014897c5dadca95cf0241481ddd14f91dfc
 
-</section>
 
-<section class="icons">
-	<h2 class="hidden">Icons</h2>
+<section class="audios">
+	<h3 class="hidden">Icons</h3>
 	
-		<div class="base">Base<audio loop  controls src="assets/base.wav" type="audio/wav" autoplay   ></audio>
-		</div>
+		<!-- <div class="base">Base<audio loop  controls src="assets/base.wav" type="audio/wav"    ></audio>
+		</div> -->
 		
-		<div  >Drumb<audio class="instruments"  style="display: none" id="drumb" controls src="assets/drum.wav" type="audio/wav" autoplay loop></audio>
+		<div  ><audio class="instruments"  style="display: none" id="drumb" controls src="assets/drum.wav" type="audio/wav" autoplay loop></audio>
   		</div>
 
-  		<div >Piano<audio class="instruments"  style="display: none" id="piano"controls src="assets/piano.wav" type="audio/wav" autoplay loop></audio>
+  		<div ><audio class="instruments"  style="display: none" id="piano"controls src="assets/piano.wav" type="audio/wav" autoplay loop></audio>
   		</div>
 
-  		<div  >Electric Guitar<audio class="instruments" style="display: none" id="electric_guitar" controls src="assets/electric_guitar.wav" autoplay type="audio/wav"  loop></audio>
+  		<div  ><audio class="instruments" style="display: none" id="electric_guitar" controls src="assets/electric_guitar.wav" autoplay type="audio/wav"  loop></audio>
   		</div>
 
-  		<div>Guitar<audio class="instruments" style="display: none" id="guitar" controls src="assets/guitar.wav" type="audio/wav" autoplay loop ></audio>	
+  		<div><audio class="instruments" style="display: none" id="guitar" controls src="assets/guitar.wav" type="audio/wav" autoplay loop ></audio>	
 		</div>
 
 
-  		<div >Cajon<audio class="instruments" style="display: none" id="cajon" controls src="assets/cajon.wav" type="audio/wav" autoplay loop></audio>
+  		<div ><audio class="instruments" style="display: none" id="cajon" controls src="assets/cajon.wav" type="audio/wav" autoplay loop></audio>
   		</div>	
 		
 
-		<div  >Shaker<audio class="instruments" style="display: none" id="shaker" controls src="assets/shaker.wav" type="audio/wav" autoplay loop></audio>
+		<div><audio class="instruments" style="display: none" id="shaker" controls src="assets/shaker.wav" type="audio/wav" autoplay loop></audio>
   		</div>
 		
 		<!-- trigger the audio to autoplay -->
 		<iframe id="iframe" src="assets/silence.wav" style="display: none" allow="autoplay"></iframe>
 		
 		
+</section>
+
+<section class="icons">
+	<h3 class="hidden">Icons</h3>
+
+	<div class="iconsImage"><img data-instrumentsref = "0" src="images/drumb-01.svg" alt="dumb" width="80" height="80"></div>
+	<div class="iconsImage"><img data-instrumentsref = "1" src="images/piano-01.svg" alt="piano" width="80" height="80"></div>
+	<div class="iconsImage"><img data-instrumentsref = "2" src="images/electro_guitar-01.svg" alt="saxophone" width="80" height="80"></div>
+	<div class="iconsImage"><img data-instrumentsref = "3" src="images/guitar-01.svg" alt="guitar" width="80" height="80"></div>
+	<div class="iconsImage"><img data-instrumentsref = "4" src="images/cajon-01.svg" alt="cello" width="80" height="80"></div>
+	<div class="iconsImage"><img data-instrumentsref = "5" src="images/maracas-01.svg" alt="maracas" width="80" height="80"></div>
+
 </section>
 	
 	<script src="js/main.js"></script>
