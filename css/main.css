@@ -112,7 +112,7 @@ body
   margin-left: 720px; 
   align-items: center;
   opacity: 1;
-  animation: scaleIn 1s infinite cubic-bezier(.17,.67,.83,.67);
+  animation: scaleIn .3s infinite cubic-bezier(.17,.67,.83,.67);
 }
 
 @keyframes scaleIn {
