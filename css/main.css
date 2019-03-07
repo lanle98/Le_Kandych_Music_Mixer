@@ -8,111 +8,130 @@
 
 body
 {
-  width: 100wh;
-  height: 90vh;
+  height: 100%;
   background-color: #050505;
+    position: relative;
 }
 
-.red 
+.title
+{
+  font-size: 100px;
+  color: white;
+  text-align: center;
+}
+
+.pulsing_Circles
+{
+  position: absolute;
+  z-index: 1;
+}
+
+.wave0 
 {
   border: 20%;
   border: px solid #FF0000;
   border-radius: 100%;
   background-color: none;
-  width: 80px;
-  height: 80px;
+  width: 5vw;
+  height: 5vw;
   display: block;
   position: absolute;
-  margin-top: 160px;
-  margin-left: 960px; 
+  top: 10vw;
+  left: 20vw; 
   align-items: center;
   opacity: 1;
-  animation: scaleIn 1s infinite cubic-bezier(.17,.67,.83,.67);
+  animation: scaleIn 650ms infinite cubic-bezier(.17,.67,.83,.67);
+  animation-timing-function: linear
 }
 
 
-.orange {
+.wave1 {
   border: 20%;
   border: px solid #FF5500;
   border-radius: 100%;
   background-color: none;
-  width: 80px;
-  height: 80px;
+  width: 5vw;
+  height: 5vw;
   display: block;
   position: absolute;
-  margin-top: 100px;
-  margin-left: 667px; 
+  top: 14vw;
+  left: 50vw; 
   align-items: center;
   opacity: 1;
-  animation: scaleIn 1s infinite cubic-bezier(.17,.67,.83,.67);
+  animation:  scaleIn 650ms infinite cubic-bezier(.17,.67,.83,.67);
+  animation-timing-function: linear
 }
 
-.green 
+.wave2
 {
   border: 20%;
   border: px solid #00FF18;
   border-radius: 100%;
   background-color: none;
-  width: 80px;
-  height: 80px;
+  width: 5vw;
+  height: 5vw;
   display: block;
   position: absolute;
-  margin-top: 400px;
-  margin-left: 1070px; 
+  top: 6vw;
+  left: 60vw; 
   align-items: center;
   opacity: 2;
-  animation: scaleIn 1s infinite cubic-bezier(.17,.67,.83,.67);
+  animation: scaleIn 650ms infinite cubic-bezier(.17,.67,.83,.67);
+  animation-timing-function: linear
 }
 
-.yellow 
+.wave3
 {
   border: 20%;
   border: px solid #FFF800;
   border-radius: 100%;
   background-color: none;
-  width: 80px;
-  height: 80px;
+  width: 5vw;
+  height: 5vw;
   display: block;
   position: absolute;
-  margin-top: 390px;
-  margin-left: 495px; 
+  top: 30vw;
+  left: 28vw; 
   align-items: center;
   opacity: 1;
-  animation: scaleIn 1s infinite cubic-bezier(.17,.67,.83,.67);
+  animation: scaleIn 650ms infinite cubic-bezier(.17,.67,.83,.67);
+  animation-timing-function: linear
 }
 
-.pink
+.wave4
  {
   border: 20%;
   border: px solid #FF00CF;
   border-radius: 100%;
   background-color: none;
-  width: 80px;
-  height: 80px;
+ width: 5vw;
+  height: 5vw;
   display: block;
   position: absolute;
-  margin-top: 110px;
-  margin-left: 460px; 
+  top: 28vw;
+  left: 49vw; 
   align-items: center;
   opacity: 1;
-  animation: scaleIn 1s infinite cubic-bezier(.17,.67,.83,.67);
+  animation: scaleIn 650ms infinite cubic-bezier(.17,.67,.83,.67);
+  animation-timing-function: linear
 }
 
-.cyan
+.wave5
  {
   border: 20%;
   border: px solid #00F3FF;
   border-radius: 100%;
   background-color: none;
-  width: 80px;
-  height: 80px;
+  width: 5vw;
+  height: 5vw;
   display: block;
   position: absolute;
-  margin-top: 400px;
-  margin-left: 720px; 
+  top: 32vw;
+  left: 75vw; 
   align-items: center;
   opacity: 1;
-  animation: scaleIn 1s infinite cubic-bezier(.17,.67,.83,.67);
+  animation: scaleIn 650ms infinite cubic-bezier(.17,.67,.83,.67);
+  animation-timing-function: linear
 }
 
 @keyframes scaleIn {
@@ -121,49 +140,73 @@ body
     opacity: 2;
   }
   to {
-    transform: scale(2, 2);
+    transform: scale(5, 5);
     opacity: 1.5;
   }
 }
 
 
+@keyframes fadeIn {
+  from {opacity: 0}
+  to{opacity: 1}
 
-
- /*.tittle
- {
-  margin-top: 20px;
-  margin-left: 400px;
- }*/
-
-#worldMap
-{
-  margin-top: 120px;
-  margin-left: 300px;
 }
+
+.map1
+{
+  animation: fadeIn .2s linear;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
+}
+
+
 
 .icons
 {
   display: flex;
   justify-content: space-evenly;
-  margin-left: 265px;
-  margin-right: 250px;
-  margin-top: 10px; 
+  margin: 50px;
+}
+
+.iconsImage
+{
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons img
+{
+   transition:.8s;
+   filter: none;
+   width: 50%;
+   height: 50%;
 }
 
 .icons img:hover
 {
-  width: 120px;
-  height: 120px;
+  filter: hue-rotate(360deg);
+  width: 60%;
+   height: 60%;
+}
+
+#worldMap
+{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: #050505;
+
 }
 
 
-
-.icons img:hover
+.map
 {
-  filter: contrast(300%);
-}
-
-.icons img:active
-{
-  filter: hue-rotate(80deg);
+  width: 70%;
+  height: 100%;
+ 
 }
