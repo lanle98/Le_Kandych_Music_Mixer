@@ -8,9 +8,16 @@
 
 body
 {
-  width: 100wh;
-  height: 90vh;
+  height: 100%;
   background-color: #050505;
+    position: relative;
+}
+
+
+.pulsing_Circles
+{
+  position: absolute;
+  z-index: 1;
 }
 
 .wave0 
@@ -19,12 +26,12 @@ body
   border: px solid #FF0000;
   border-radius: 100%;
   background-color: none;
-  width: 80px;
-  height: 80px;
+  width: 5vw;
+  height: 5vw;
   display: block;
   position: absolute;
-  margin-top: 160px;
-  margin-left: 960px; 
+  top: 10vw;
+  left: 20vw; 
   align-items: center;
   opacity: 1;
   animation: scaleIn 650ms infinite cubic-bezier(.17,.67,.83,.67);
@@ -37,12 +44,12 @@ body
   border: px solid #FF5500;
   border-radius: 100%;
   background-color: none;
-  width: 80px;
-  height: 80px;
+  width: 5vw;
+  height: 5vw;
   display: block;
   position: absolute;
-  margin-top: 100px;
-  margin-left: 667px; 
+  top: 14vw;
+  left: 50vw; 
   align-items: center;
   opacity: 1;
   animation:  scaleIn 650ms infinite cubic-bezier(.17,.67,.83,.67);
@@ -55,12 +62,12 @@ body
   border: px solid #00FF18;
   border-radius: 100%;
   background-color: none;
-  width: 80px;
-  height: 80px;
+  width: 5vw;
+  height: 5vw;
   display: block;
   position: absolute;
-  margin-top: 400px;
-  margin-left: 1070px; 
+  top: 6vw;
+  left: 60vw; 
   align-items: center;
   opacity: 2;
   animation: scaleIn 650ms infinite cubic-bezier(.17,.67,.83,.67);
@@ -73,12 +80,12 @@ body
   border: px solid #FFF800;
   border-radius: 100%;
   background-color: none;
-  width: 80px;
-  height: 80px;
+  width: 5vw;
+  height: 5vw;
   display: block;
   position: absolute;
-  margin-top: 390px;
-  margin-left: 495px; 
+  top: 30vw;
+  left: 28vw; 
   align-items: center;
   opacity: 1;
   animation: scaleIn 650ms infinite cubic-bezier(.17,.67,.83,.67);
@@ -91,12 +98,12 @@ body
   border: px solid #FF00CF;
   border-radius: 100%;
   background-color: none;
-  width: 80px;
-  height: 80px;
+ width: 5vw;
+  height: 5vw;
   display: block;
   position: absolute;
-  margin-top: 110px;
-  margin-left: 460px; 
+  top: 28vw;
+  left: 49vw; 
   align-items: center;
   opacity: 1;
   animation: scaleIn 650ms infinite cubic-bezier(.17,.67,.83,.67);
@@ -109,12 +116,12 @@ body
   border: px solid #00F3FF;
   border-radius: 100%;
   background-color: none;
-  width: 80px;
-  height: 80px;
+  width: 5vw;
+  height: 5vw;
   display: block;
   position: absolute;
-  margin-top: 400px;
-  margin-left: 720px; 
+  top: 32vw;
+  left: 75vw; 
   align-items: center;
   opacity: 1;
   animation: scaleIn 650ms infinite cubic-bezier(.17,.67,.83,.67);
@@ -133,55 +140,57 @@ body
 }
 
 
+@keyframes fadeIn {
+  from {opacity: 0}
+  to{opacity: 1}
 
-
- /*.tittle
- {
-  margin-top: 20px;
-  margin-left: 400px;
- }*/
-
-#worldMap
-{
-  margin-top: 120px;
-  margin-left: 300px;
 }
+
+.map1
+{
+  animation: fadeIn .3s linear;
+   position: absolute;
+}
+
+
 
 .icons
 {
   display: flex;
   justify-content: space-evenly;
-  margin-left: 265px;
-  margin-right: 250px;
-  margin-top: 10px; 
+  margin-top: 50px;
+
+}
+
+
+.icons img
+{
+   transition:.8s;
+   filter: none;
+   width: 7%;
+   height: 7%;
 }
 
 .icons img:hover
 {
-  width: 120px;
-  height: 120px;
+  filter: hue-rotate(360deg);
+  width: 8%;
+   height: 8%;
 }
 
-
-
-.icons img:hover
+#worldMap
 {
-  filter: contrast(300%);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: #050505;
+
 }
 
-.icons img:active
-{
-  filter: hue-rotate(80deg);
-}
 
-
-.icons
-{
-  position: absolute;
-}
 .map
 {
-  position: absolute;
-  width: 100%;
+  width: 70%;
   height: 100%;
+ 
 }

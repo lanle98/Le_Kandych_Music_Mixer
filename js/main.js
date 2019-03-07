@@ -12,7 +12,9 @@
 	console.log(icons)
 	let dropzone = document.getElementById("worldMap")
 	console.log(dropzone)
-
+	let newMap;
+	let i = 1;
+	let pulsingCir = document.querySelector(".pulsing_Circles")
 
 	
 
@@ -50,14 +52,27 @@
 			console.log(dataDrop)
 				instruments[dataDrop].volume = 1;
 			console.log('you dropped something on me');
-			let newWave = `<img class="wave${e.dataTransfer.getData("text/plain")}" class="wave-image"
-			 	src="images/${"wave"+ e.dataTransfer.getData("text/plain")}.svg" alt="Wave" draggable>`;
-			 	waveZone.innerHTML += newWave;
-			 	console.log(newWave);
-			let newMap = `<img class="map${e.dataTransfer.getData("text/plain")} map" class="wave-image"
-			 	src="images/${"map"+ e.dataTransfer.getData("text/plain")}.svg" alt="Wave" draggable>`;
-			 	console.log(newMap);
 
+			if(pulsingCir.childElementCount<7)
+				{
+					let newWave = `<img class="wave${e.dataTransfer.getData("text/plain")}" class="wave-image"
+				 	src="images/${"wave"+ e.dataTransfer.getData("text/plain")}.svg" alt="Wave" draggable>`;
+				 	waveZone.innerHTML += newWave;
+				 	console.log(newWave);
+				}
+			
+			 if(i<=5)
+			 	{
+			 		newMap = `<img class="map map1" class="wave-image"
+			 	src="images/${"map"+ i++}.svg" alt="Wave" draggable>`;
+			 	console.log(newMap);
+			 	}
+			 	console.log(pulsingCir.children)
+
+			 	
+				
+			
+			 	// dropzone.removeChild(dropzone.firstElementChild)
 			 	dropzone.innerHTML += newMap ;
 			 	
 		})
