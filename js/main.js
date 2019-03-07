@@ -4,72 +4,52 @@
 
 
 	let instruments = document.querySelectorAll(".instruments");
-
-
-
+	let audio = document.querySelectorAll("audio")
+	let button = document.querySelectorAll("button");
+	
 	instruments.forEach(Off => Off.volume = 0);
+	let icons = document.querySelector(".icons")
+	console.log(icons)
+	let dropzone = document.getElementById("worldMap")
+	console.log(dropzone)
+
+
+	
+
+			icons.querySelectorAll("img").forEach(img => img.addEventListener("dragstart", function o(e){
+				console.log('draggin...');
+				e.dataTransfer.setData("text/plain", this.dataset.instrumentsref);
+				console.log(this.dataset.instrumentsref)
+				
+				
+			}))
+
+
+	
+
+				// instruments[iconAudio].volume = 1;
+
+			
+
+	dropzone.addEventListener("dragover", function(e){
+			e.preventDefault();
+			console.log('dragged over me!')
+		}); 
+
+		dropzone.addEventListener("drop", function(e) {
+			e.preventDefault();
+			let dataDrop = e.dataTransfer.getData("text/plain");
+			console.log(dataDrop)
+				instruments[dataDrop].volume = 1;
+			console.log('you dropped something on me');
+		})
+
 	
 
 
-	let volumeOn = document.querySelector("audio");
-	let button = document.querySelectorAll("button");
-	let guitarbutton = document.getElementById("guitarbutton");
-	let electric_guitarbutton = document.getElementById("electric_guitarbutton");
-	let drumbbutton = document.getElementById("drumbbutton");
-	let shakerbutton = document.getElementById("shakerbutton");
-	let pianobutton = document.getElementById("pianobutton");
-	let cajonbutton = document.getElementById("cajonbutton");
+	
+	
 
-
-
-
-	function guitarOn()
-	{
-			document.getElementById("guitar").volume = 1;
-			console.log(this);
-	}
-
-
-	function electric_guitarOn()
-	{
-			document.getElementById("electric_guitar").volume = 1;
-			console.log(this);
-	}
-
-
-	function drumbOn()
-	{
-			document.getElementById("drumb").volume = 1;
-			console.log(this);
-	}
-
-
-	function shakerOn()
-	{
-			shaker.volume = 1;
-			console.log(this);
-	}
-
-
-	function pianoOn()
-	{
-			piano.volume = 1;
-			console.log(this);
-	}
-
-	function cajonOn()
-	{
-			cajon.volume = 1;
-			console.log(this);
-	}
-
-	// button.forEach(buttonOn => buttonOn.addEventListener("click",guitarOn));
-	guitarbutton.addEventListener("click",guitarOn);
-	electric_guitarbutton.addEventListener("click",electric_guitarOn);
-	drumbbutton.addEventListener("click",drumbOn);
-	shakerbutton.addEventListener("click",shakerOn);
-	pianobutton.addEventListener("click",pianoOn);
-	cajonbutton.addEventListener("click",cajonOn);
 
 	
 

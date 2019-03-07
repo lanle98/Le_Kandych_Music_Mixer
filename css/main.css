@@ -3,14 +3,14 @@
 
 .hidden
 {
-	display: none;
+  display: none;
 }
 
 body
 {
-	width: 100wh;
-	height: 90vh;
-	background-color: #050505;
+  width: 100wh;
+  height: 90vh;
+  background-color: #050505;
 }
 
 .red 
@@ -95,7 +95,7 @@ body
   margin-left: 460px; 
   align-items: center;
   opacity: 1;
-  animation: scaleIn 1s infinite cubic-bezier(.17,.67,.83,.67);
+  animation: scaleIn .4s infinite cubic-bezier(.17,.67,.83,.67);
 }
 
 .cyan
@@ -131,29 +131,29 @@ body
 
  /*.tittle
  {
- 	margin-top: 20px;
- 	margin-left: 400px;
+  margin-top: 20px;
+  margin-left: 400px;
  }*/
 
 #worldMap
 {
-	margin-top: 120px;
-	margin-left: 300px;
+  margin-top: 120px;
+  margin-left: 300px;
 }
 
 .icons
 {
-	display: flex;
-	justify-content: space-evenly;
-	margin-left: 265px;
-	margin-right: 250px;
-	margin-top: 10px; 
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 265px;
+  margin-right: 250px;
+  margin-top: 10px; 
 }
 
 .icons img:hover
 {
-	width: 120px;
-	height: 120px;
+  width: 120px;
+  height: 120px;
 }
 
 
@@ -167,13 +167,3 @@ body
 {
   filter: hue-rotate(80deg);
 }
-
-
-
-
-
-
-
-
-
-
