@@ -3,7 +3,7 @@
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 854.8 533" style="enable-background:new 0 0 854.8 533;" xml:space="preserve">
 <style type="text/css">
-	.st0{opacity:0.6;}
+	.st0{opacity:0.3;}
 	.st1{fill:url(#SVGID_1_);}
 	.st2{fill:url(#SVGID_2_);}
 	.st3{fill:url(#SVGID_3_);}
@@ -119,7 +119,7 @@
 	.st113{fill:url(#SVGID_113_);}
 	.st114{fill:url(#SVGID_114_);}
 </style>
-<g id="active_2_" class="st0">
+<g id="active" class="st0">
 	<g>
 		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="76.2121" y1="7.6039" x2="76.2121" y2="444.5946">
 			<stop  offset="1.502404e-03" style="stop-color:#008694"/>

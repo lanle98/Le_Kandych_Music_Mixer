@@ -4,31 +4,45 @@
 
 
 	let instruments = document.querySelectorAll(".instruments");
-	let audio = document.querySelectorAll("audio")
-	let button = document.querySelectorAll("button");
-	let waveZone = document.querySelector(".pulsing_Circles")
-	instruments.forEach(Off => Off.volume = 0);
-	let icons = document.querySelector(".icons")
-	console.log(icons)
-	let dropzone = document.getElementById("worldMap")
-	console.log(dropzone)
-	let newMap;
-	let i = 1;
-	let pulsingCir = document.querySelector(".pulsing_Circles")
+		audio = document.querySelectorAll("audio")
+		button = document.querySelectorAll("button");
+		waveZone = document.querySelector(".pulsing_Circles")
+		soundOff = instruments.forEach(Off => Off.muted = true);
+		icons = document.querySelector(".icons")
+		dropzone = document.getElementById("worldMap")
+	let	newMap;
+		a = 1;
+		pulsingCir = document.querySelector(".pulsing_Circles")
+		waveArray = ['wave0', 'wave1', 'wave2', 'wave3', 'wave4', 'wave5']
+		prompt = document.querySelector(".prompt")
+		prompt_btn = document.querySelector(".prompt-btn")
+		soundbtn = document.querySelector(".sound")
+		volumeOn = document.querySelector(".volumeOn")
+		volumeOff = document.querySelector(".volumeOff")
+		reset = document.querySelector(".reset")
 
-	
+	// add function to close prompt
+	prompt_btn.addEventListener("click", function (){
+		let prompt = document.querySelector(".prompt")
+		prompt.style.display = "none"
+		document.querySelector(".container").style.display = "block"
+	})
 
-			icons.querySelectorAll("img").forEach(img => img.addEventListener("dragstart", function o(e){
+
+	// reset button
+	reset.addEventListener("click", function(){
+		location.reload()
+
+	})
+
+
+
+
+	// drag function
+	icons.querySelectorAll("img").forEach(img => img.addEventListener("dragstart", function o(e){
 				console.log('draggin...');
 				e.dataTransfer.setData("text/plain", this.dataset.instrumentsref);
 				console.log(this.dataset.instrumentsref)
-				
-			 	console.log(this)
-			 	console.log(img)
-
-
-	
-				
 				
 			}))
 
@@ -40,53 +54,98 @@
 
 	
 
-
+	// drag over function
 	dropzone.addEventListener("dragover", function(e){
 			e.preventDefault();
 			console.log('dragged over me!')
 		}); 
 
-		dropzone.addEventListener("drop", function(e) {
+
+	// drop function
+	dropzone.addEventListener("drop", function(e) {
 			e.preventDefault();
+
+
+			// get data from drag
 			let dataDrop = e.dataTransfer.getData("text/plain");
-			console.log(dataDrop)
-				instruments[dataDrop].volume = 1;
+
+			// if mute button is on => mute everything
+			if(volumeOff.style.display === "block")
+			{
+				instruments[dataDrop].muted = true;
+			}
+			// else, unmute
+			else
+			{
+				instruments[dataDrop].muted = false;
+			}
+
 			console.log('you dropped something on me');
 
-			if(pulsingCir.childElementCount<7 )
-				{
-					let newWave = `<img class="wave${e.dataTransfer.getData("text/plain")}" class="wave-image"
-				 	src="images/${"wave"+ e.dataTransfer.getData("text/plain")}.svg" alt="Wave" draggable>`;
-				 	waveZone.innerHTML += newWave;
-				 	console.log(newWave);
-				}
+			// create sound waves
+			let newWave = `<img class="wave${e.dataTransfer.getData("text/plain")} wave-image" id="wave${e.dataTransfer.getData("text/plain")}"
+			src="images/${"wave"+ e.dataTransfer.getData("text/plain")}.svg" alt="Wave" draggable>`;
+
+
 			
-			 if(i<=6)
-			 	{
-			 		newMap = `<img class="map map1" class="wave-image"
-			 	src="images/${"map"+ i++}.svg" alt="Wave" draggable>`;
-			 	console.log(newMap);
-
-
-			 	}
-
-			 	
+			// mute and unmute button
+			soundbtn.addEventListener("click", function (){
 				
-			
-			 	// dropzone.removeChild(dropzone.firstElementChild)
-			 	dropzone.innerHTML += newMap;
-			 	// dropzone.removeChild(dropzone.children[1])
-			 
+					if(instruments[dataDrop].muted == false)
+					{
+						
+						volumeOn.style.display= "none"
+						volumeOff.style.display= "block"
+						instruments[dataDrop].muted = true
+					}
+					else
+					{
+						volumeOn.style.display= "block"
+						volumeOff.style.display= "none"
+						instruments[dataDrop].muted = false
+					}
+				
+				
+		})
+
+
+	
+
+			// append sound waves to DOM
+			waveZone.innerHTML += newWave;
+			let wave = document.querySelectorAll(".wave-image");
+
+			// avoid appending the same elements
+			wave.forEach(function (e) {
+				
+				for( let i = 0; i<waveArray.length; i++)
+				{
+					if(e.id === waveArray[i])
+					{
+						waveArray.splice(waveArray.indexOf(e.id),1)
+						console.log(waveArray)
+						waveZone.innerHTML += newWave;
+
+
+
+						// create flashing map
+						let newMap = `<img class="map mapFlashing"
+			 			src="images/${"map"+ a++}.svg" alt="Wave" draggable>`;
+
+						dropzone.innerHTML += newMap;
+					}
+
+				}
+
+			})
+
+			// remove the child if it's repeated
+			waveZone.removeChild(waveZone.lastChild);
+
+
+
 			 	
 		})
 
-	
 
-
-	
-	
-
-
-	
-
-	})();
+})();
