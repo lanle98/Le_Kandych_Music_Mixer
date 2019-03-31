@@ -226,6 +226,7 @@ body
   opacity: 1;
   animation: scaleIn 300ms infinite cubic-bezier(.17,.67,.83,.67);
   animation-timing-function: linear
+
 }
 
 @keyframes scaleIn {
