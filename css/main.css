@@ -141,7 +141,6 @@ body
 
 .wave1 {
   border: 20%;
-  border: px solid #FF5500;
   border-radius: 100%;
   background-color: none;
   width: 5vw;
@@ -305,5 +304,6 @@ body
 {
   width: 70%;
   height: 100%;
+
  
 }
