@@ -1,6 +1,10 @@
  # World Music Mixer
  
-  This is the repo about how we create a website with drag and drop functionality. When you drag an instrument into the specific element, it will play that instrument. You will have about 4 to 5 different intruments to drag in order to create a complete song. Our web page is a world map. When you drag an instrument, pulsing circles apper on the wold map. Those circles indicate the most popular cities at each continent.
+  This is the repo about how we create a website with drag and drop functionality.   
+  When you drag an instrument into the specific element, it will play that instrument.   
+  You will have about 4 to 5 different intruments to drag in order to create a complete song.  
+  Our web page is a world map. When you drag an instrument, pulsing circles apper on the wold map.   
+  Those circles indicate the most popular cities at each continent.
 
   
 ### Le Kien Lan - Developer 
