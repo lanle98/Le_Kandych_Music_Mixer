@@ -123,15 +123,14 @@ body
 .wave0 
 {
   border: 20%;
-  border: px solid #FF0000;
   border-radius: 100%;
   background-color: none;
   width: 5vw;
   height: 5vw;
   display: block;
   position: absolute;
-  top: 10vw;
-  left: 20vw; 
+  top: 8vw;
+  left: 25vw; 
   align-items: center;
   opacity: 1;
   animation: scaleIn 650ms infinite cubic-bezier(.17,.67,.83,.67);
@@ -141,7 +140,6 @@ body
 
 .wave1 {
   border: 20%;
-  border: px solid #FF5500;
   border-radius: 100%;
   background-color: none;
   width: 5vw;
@@ -159,7 +157,6 @@ body
 .wave2
 {
   border: 20%;
-  border: px solid #00FF18;
   border-radius: 100%;
   background-color: none;
   width: 5vw;
@@ -177,7 +174,6 @@ body
 .wave3
 {
   border: 20%;
-  border: px solid #FFF800;
   border-radius: 100%;
   background-color: none;
   width: 5vw;
@@ -185,7 +181,7 @@ body
   display: block;
   position: absolute;
   top: 30vw;
-  left: 28vw; 
+  left: 32vw; 
   align-items: center;
   opacity: 1;
   animation: scaleIn 700ms infinite cubic-bezier(.17,.67,.83,.67);
@@ -202,7 +198,7 @@ body
   height: 5vw;
   display: block;
   position: absolute;
-  top: 28vw;
+  top: 26vw;
   left: 49vw; 
   align-items: center;
   opacity: 1;
@@ -220,8 +216,8 @@ body
   height: 5vw;
   display: block;
   position: absolute;
-  top: 32vw;
-  left: 75vw; 
+  top: 28vw;
+  left: 70vw; 
   align-items: center;
   opacity: 1;
   animation: scaleIn 300ms infinite cubic-bezier(.17,.67,.83,.67);
