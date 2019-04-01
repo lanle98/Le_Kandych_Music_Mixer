@@ -216,8 +216,8 @@ body
   height: 5vw;
   display: block;
   position: absolute;
-  top: 28vw;
-  left: 70vw; 
+ top: 32vw;
+  left: 75vw;  
   align-items: center;
   opacity: 1;
   animation: scaleIn 300ms infinite cubic-bezier(.17,.67,.83,.67);
